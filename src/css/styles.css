@@ -12,11 +12,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, #a5b4fc, #93c5fd);
+  background: linear-gradient(90deg, #4270d3, #93c5fd);
 }
 
 .kanban {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 14px;
   padding: 24px;
   width: 100%;
