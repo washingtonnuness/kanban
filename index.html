@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="stylesheet" href="./src/css/modal.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -11,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <title>Kanban</title>
   </head>
@@ -21,12 +23,12 @@
         <div class="kanban-title">
           <h2>Pendente</h2>
 
-          <button class="add-card">
+          <button class="add-card" onclick="openTaskForm('column-1')">
             <i class="fa-solid fa-plus"></i>
           </button>
         </div>
 
-        <div class="kanban-cards">
+        <div class="kanban-cards" id="column-1">
           <div class="kanban-card" draggable="true">
             <div class="badge medium">
               <span> Média prioridade </span>
@@ -60,12 +62,12 @@
         <div class="kanban-title">
           <h2>Em front-end</h2>
 
-          <button class="add-card">
+          <button class="add-card" onclick="openTaskForm('column-2')">
             <i class="fa-solid fa-plus"></i>
           </button>
         </div>
 
-        <div class="kanban-cards">
+        <div class="kanban-cards" id="column-2">
           <div class="kanban-card" draggable="true">
             <div class="badge high">
               <span> Alta prioridade </span>
@@ -99,12 +101,12 @@
         <div class="kanban-title">
           <h2>Em back-end</h2>
 
-          <button class="add-card">
+          <button class="add-card" onclick="openTaskForm('column-3')">
             <i class="fa-solid fa-plus"></i>
           </button>
         </div>
 
-        <div class="kanban-cards">
+        <div class="kanban-cards" id="column-3">
           <div class="kanban-card" draggable="true">
             <div class="badge low">
               <span> Baixa prioridade </span>
@@ -138,12 +140,12 @@
         <div class="kanban-title">
           <h2>Em teste</h2>
 
-          <button class="add-card">
+          <button class="add-card" onclick="openTaskForm('column-4')">
             <i class="fa-solid fa-plus"></i>
           </button>
         </div>
 
-        <div class="kanban-cards">
+        <div class="kanban-cards" id="column-4">
           <div class="kanban-card" draggable="true">
             <div class="badge high">
               <span> Alta prioridade </span>
@@ -177,12 +179,12 @@
         <div class="kanban-title">
           <h2>Concluído</h2>
 
-          <button class="add-card">
+          <button class="add-card" onclick="openTaskForm('column-5')">
             <i class="fa-solid fa-plus"></i>
           </button>
         </div>
 
-        <div class="kanban-cards">
+        <div class="kanban-cards" id="column-5">
           <div class="kanban-card" draggable="true">
             <div class="badge high">
               <span> Alta prioridade </span>
@@ -211,7 +213,7 @@
         </div>
       </div>
     </main>
-
     <script src="src/javascript/script.js"></script>
+    <script src="./src/javascript/modal.js"></script>
   </body>
 </html>
